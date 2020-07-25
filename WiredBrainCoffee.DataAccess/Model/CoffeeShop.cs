@@ -6,5 +6,5 @@
         public int BeansInStockInKg { get; set; }
     }
 }
-//
+
 
