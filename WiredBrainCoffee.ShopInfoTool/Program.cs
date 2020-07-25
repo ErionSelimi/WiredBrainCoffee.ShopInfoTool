@@ -18,7 +18,7 @@ namespace WiredBrainCoffee.ShopInfoTool
                 var line = Console.ReadLine();
                 var coffeeShops = coffeeShopDataProvider.LoadCoffeeShops();
 
-                if (string.Equals("help",line,StringComparison.OrdinalIgnoreCase))//
+                if (string.Equals("help",line,StringComparison.OrdinalIgnoreCase))
                 {
                     foreach(var coffeeShop in coffeeShops)
                     {
