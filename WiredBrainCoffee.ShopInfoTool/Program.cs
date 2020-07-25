@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using WiredBrainCoffee.DataAccess;
 
 namespace WiredBrainCoffee.ShopInfoTool
@@ -9,7 +10,7 @@ namespace WiredBrainCoffee.ShopInfoTool
         {
             Console.WriteLine("Wired Brain Coffee - Shop Info Tool!");
 
-            Console.WriteLine("Write 'help' to list available coffe shop commands");
+            Console.WriteLine("Write 'help' to list available Coffe Shop commands");
 
             var coffeeShopDataProvider = new CoffeeShopDataProvider();
 
@@ -17,7 +18,7 @@ namespace WiredBrainCoffee.ShopInfoTool
             {
                 var line = Console.ReadLine();
                 var coffeeShops = coffeeShopDataProvider.LoadCoffeeShops();
-
+                //Debugger.Break();
                 if (string.Equals("help",line,StringComparison.OrdinalIgnoreCase))
                 {
                     foreach(var coffeeShop in coffeeShops)
