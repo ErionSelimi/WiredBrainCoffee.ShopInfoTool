@@ -1,0 +1,30 @@
+﻿using System.Collections.Generic;
+using WiredBrainCoffee.DataAccess.Model;
+
+namespace WiredBrainCoffee.DataAccess
+{
+    public class CoffeeShopDataProvider
+    {
+        //public IEnumerable<CoffeeShop> LoadCoffeeShops()
+        //{
+        //yield return new CoffeeShop { Location = "FrankFurt", BeansInStockInKg = 107 };
+        //yield return new CoffeeShop { Location = "Freiburg", BeansInStockInKg = 23 };
+        //yield return new CoffeeShop { Location = "Munich", BeansInStockInKg = 56 };
+        //}
+
+        public List<CoffeeShop> ListCoffeeShop { get; set; }
+        public IEnumerable<CoffeeShop> LoadCoffeeShops()
+        {
+            ListCoffeeShop = new List<CoffeeShop>();
+
+            CoffeeShop CoffeeShopFrankFurt = new CoffeeShop { Location = "FrankFurt", BeansInStockInKg = 107 };
+            CoffeeShop CoffeeShopFreiburg = new CoffeeShop { Location = "Freiburg", BeansInStockInKg = 23 };
+            CoffeeShop CoffeeShopMunich = new CoffeeShop { Location = "Munich", BeansInStockInKg = 56 };
+
+            ListCoffeeShop.Add(CoffeeShopFrankFurt);
+            ListCoffeeShop.Add(CoffeeShopFreiburg);
+            ListCoffeeShop.Add(CoffeeShopMunich);
+            return ListCoffeeShop;
+        }
+    }
+}
