@@ -13,10 +13,10 @@
       <TextPosition>
         <Version>4</Version>
         <FileName>.\WiredBrainCoffee.ShopInfoTool\Program.cs</FileName>
-        <startLine>13</startLine>
+        <startLine>15</startLine>
         <StartColumn>12</StartColumn>
-        <EndLine>13</EndLine>
-        <EndColumn>70</EndColumn>
+        <EndLine>15</EndLine>
+        <EndColumn>24</EndColumn>
         <MarkerId>0</MarkerId>
         <IsLineBased>0</IsLineBased>
         <IsDocumentPathNotFound>0</IsDocumentPathNotFound>
@@ -29,7 +29,7 @@
         </Checksum>
       </TextPosition>
       <NamedLocationText>WiredBrainCoffee.ShopInfoTool.Program.Main(string[] args)</NamedLocationText>
-      <NamedLocationLine>6</NamedLocationLine>
+      <NamedLocationLine>8</NamedLocationLine>
       <NamedLocationColumn>0</NamedLocationColumn>
       <HitCountType>NoHitCount</HitCountType>
       <HitCountTarget>1</HitCountTarget>
