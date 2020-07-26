@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 using WiredBrainCoffee.DataAccess;
+using WiredBrainCoffee.DataAccess.Model;
 
 namespace WiredBrainCoffee.ShopInfoTool
 {
@@ -26,12 +28,40 @@ namespace WiredBrainCoffee.ShopInfoTool
 
                 var coffeeShops = coffeeShopDataProvider.LoadCoffeeShops();
                 //Debugger.Break();
-                if (string.Equals("help",line,StringComparison.OrdinalIgnoreCase))
+                if (string.Equals("help", line, StringComparison.OrdinalIgnoreCase))
                 {
-                    foreach(var coffeeShop in coffeeShops)
+                    Console.WriteLine("Available coffee shop commands");
+                    foreach (var coffeeShop in coffeeShops)
                     {
                         Console.WriteLine($"> {coffeeShop.Location}");
                     }
+                }
+                else 
+                {
+
+                    var foundCoffeeeShops = coffeeShops
+                        .Where(x => x.Location.StartsWith(line, StringComparison.OrdinalIgnoreCase))
+                        .ToList(); 
+                    
+                    if (foundCoffeeeShops.Count() == 0)
+                    {
+                        Console.WriteLine($"> Command '{line}' not found");
+                    }
+                    else if (foundCoffeeeShops.Count() == 1)
+                    {
+                        var coffeeShop = foundCoffeeeShops.Single();
+                        Console.WriteLine($"> Location: {coffeeShop.Location }");
+                        Console.WriteLine($"> Beans in stock: {coffeeShop.BeansInStockInKg} in kg");  
+                    }
+                    else
+                    {
+                        Console.WriteLine($"> Multiple matching coffe shops found. Please select one location:");
+                        foreach(var coffeeType in foundCoffeeeShops)
+                        {
+                            Console.WriteLine($"> {coffeeType.Location}");
+                        }
+                    }
+
                 }
             }
 
