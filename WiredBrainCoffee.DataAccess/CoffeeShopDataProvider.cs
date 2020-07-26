@@ -17,10 +17,30 @@ namespace WiredBrainCoffee.DataAccess
         {
             ListCoffeeShop = new List<CoffeeShop>();
 
-            CoffeeShop CoffeeShopFrankFurt = new CoffeeShop { Location = "FrankFurt", BeansInStockInKg = 107 };
-            CoffeeShop CoffeeShopFreiburg = new CoffeeShop { Location = "Freiburg", BeansInStockInKg = 23 };
-            CoffeeShop CoffeeShopMunich1 = new CoffeeShop { Location = "Munich1", BeansInStockInKg = 156 };
-            CoffeeShop CoffeeShopMunich2 = new CoffeeShop { Location = "Munich2", BeansInStockInKg = 256 };
+            CoffeeShop CoffeeShopFrankFurt = new CoffeeShop
+            {
+                Location = "FrankFurt",
+                BeansInStockInKg = 107,
+                PaperCupsInStock = 350
+            };
+            CoffeeShop CoffeeShopFreiburg = new CoffeeShop
+            {
+                Location = "Freiburg",
+                BeansInStockInKg = 23,
+                PaperCupsInStock = 120
+            };
+            CoffeeShop CoffeeShopMunich1 = new CoffeeShop
+            {
+                Location = "Munich1",
+                BeansInStockInKg = 156,
+                PaperCupsInStock = 100
+            };
+            CoffeeShop CoffeeShopMunich2 = new CoffeeShop
+            {
+                Location = "Munich2",
+                BeansInStockInKg = 256,
+                PaperCupsInStock = 200
+            };
 
             ListCoffeeShop.Add(CoffeeShopFrankFurt);
             ListCoffeeShop.Add(CoffeeShopFreiburg);
