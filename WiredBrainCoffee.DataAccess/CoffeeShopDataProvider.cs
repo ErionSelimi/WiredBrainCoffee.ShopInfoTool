@@ -19,11 +19,13 @@ namespace WiredBrainCoffee.DataAccess
 
             CoffeeShop CoffeeShopFrankFurt = new CoffeeShop { Location = "FrankFurt", BeansInStockInKg = 107 };
             CoffeeShop CoffeeShopFreiburg = new CoffeeShop { Location = "Freiburg", BeansInStockInKg = 23 };
-            CoffeeShop CoffeeShopMunich = new CoffeeShop { Location = "Munich", BeansInStockInKg = 56 };
+            CoffeeShop CoffeeShopMunich1 = new CoffeeShop { Location = "Munich1", BeansInStockInKg = 156 };
+            CoffeeShop CoffeeShopMunich2 = new CoffeeShop { Location = "Munich2", BeansInStockInKg = 256 };
 
             ListCoffeeShop.Add(CoffeeShopFrankFurt);
             ListCoffeeShop.Add(CoffeeShopFreiburg);
-            ListCoffeeShop.Add(CoffeeShopMunich);
+            ListCoffeeShop.Add(CoffeeShopMunich1);
+            ListCoffeeShop.Add(CoffeeShopMunich2);
             return ListCoffeeShop;
         }
     }
